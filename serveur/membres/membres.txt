@@ -1,0 +1,7 @@
+Marjolaine;Hébert;admin@streamtopia.com;feminin;1980-09-24
+Maxime;Denis;maxime-denis@streamtopia.com;masculin;1974-09-06
+Simon;Simonneau;simon-simonneau@simmons.ca;masculin;1990-04-01
+Bob;Binette;bbinette@binette.ca;masculin;1939-06-08
+Silvia;Silvester;contact@silviasilvester.com;feminin;1979-11-15
+Renaldo;Renoir;rrenoir@renoiretassocies.qc.ca;masculin;1970-12-24
+Roger;Roger;roger_roger112@caramail.fr;masculin;1909-01-14
