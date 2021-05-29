@@ -6,12 +6,13 @@
         echo "Problème pour ouvrir le fichier connexion.txt"; 
         exit; 
     }
-
+    
     $courriel=$_POST['courrielMembre'];
     $motDePasse=$_POST['motDePasseMembre'];
-
+    
     $ligne=fgets($connex);
     $trouverCourriel=false;
+    
     while (!feof($connex) && !$trouverCourriel) {
         $tab=explode(";",$ligne);
         if ($tab[0] === $courriel) {
@@ -24,11 +25,15 @@
     fclose($connex);
 
     if($trouverCourriel){
-        echo "J'ai trouvé le courriel "; 
-        echo $courriel;
+        if ($motDePasse===$tab[1]) {
+            header("Location: ../public/pages/membre.html");
+        } 
+        else {
+            header("Location: connexionErreur.php");
+        }
     }
     else {
-        echo "Le courriel ne se trouve pas dans la base de donnée. Veuillez réessayer."
+        echo "Le courriel ne se trouve pas dans la base de donnée. Veuillez vous enregistrer.";
     }
     
 ?>

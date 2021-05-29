@@ -5,9 +5,6 @@ Bob;Binette;bbinette@binette.ca;masculin;1939-06-08
 Silvia;Silvester;contact@silviasilvester.com;feminin;1979-11-15
 Renaldo;Renoir;rrenoir@renoiretassocies.qc.ca;masculin;1970-12-24
 Roger;Roger;roger_roger112@caramail.fr;masculin;1909-01-14
-ghsfgh;D;courriel@hotmail.com;feminin;1984-06-28
-A;D;simonsimonneau@simmons.ca;feminin;2021-05-26
-Marjolaine;Hébert;patate@hotmail.com;feminin;2021-05-15
-Marjolaine;Hébert;marjolainehebert@hotmail.com;feminin;2021-05-21
-Marjolaine;Hébert;marjolainehebert@hotmail.com;feminin;2021-05-13
-Marjolaine;Simonneau;simon.simonneau@simmons.ca;feminin;2021-05-04
+Marjolaine;Hébert;marjolainehebert@hotmail.com;feminin;1980-09-24
+Ginette;Gendron;gigi_1954@caramail.fr;feminin;1954-04-01
+Gontrand;Gauthier;gg@gauthier.qc.ca;masculin;1942-06-24

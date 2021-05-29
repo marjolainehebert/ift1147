@@ -33,6 +33,6 @@
     fclose($connex);
 
 // redirection vers la page succès
-    header("Location: ../succes.html");
+    header("Location: ../public/pages/succes.html");
     
 ?>

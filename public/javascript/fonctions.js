@@ -1,3 +1,5 @@
+var messageSucces = "";
+
 // fermer le modal enregistrer et ouvrir le modal connexion
 function connexionModal() {
     $('#enregistrer').modal('hide');
@@ -8,6 +10,9 @@ function connexionModal() {
 function enregistrementModal() {
     $('#connexion').modal('hide');
     $('#enregistrer').modal('show');
+}
+function connexionSucces(){
+    messageSucces = "Bienvenue à la page membre"
 }
 
 
