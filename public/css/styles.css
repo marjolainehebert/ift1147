@@ -91,7 +91,10 @@ a.dark-link:hover {
     color:black;
 }
 
-#messagePrenom, #messageNom, #messageCourriel, #messageMdpVide, #messageMdpErrone, #messageConfMdpVide, #messageConfMdpErrone, #messageNaissance{
+#messagePrenom, #messageNom, #messageCourriel, 
+#messageMdpVide, #messageMdpErrone, 
+#messageConfMdpVide, #messageConfMdpErrone, #messageNaissance, 
+#messageCourrielMembre, #messageMdpMembreVide, #messageMdpMembreErrone {
     width:100% !important;
     color:red;
     font-weight: bold;

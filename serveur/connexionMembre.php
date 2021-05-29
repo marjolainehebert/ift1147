@@ -7,19 +7,28 @@
         exit; 
     }
 
-    $courriel=$_POST['courriel'];
-    $motDePasse=$_POST['motDePasse'];
+    $courriel=$_POST['courrielMembre'];
+    $motDePasse=$_POST['motDePasseMembre'];
 
     $ligne=fgets($connex);
-    while (!feof($connex)) {
+    $trouverCourriel=false;
+    while (!feof($connex) && !$trouverCourriel) {
         $tab=explode(";",$ligne);
-        if ($tab[0] == $courriel) {
-            echo "J'ai trouvé le fichier"; 
-            exit; 
+        if ($tab[0] === $courriel) {
+            $trouverCourriel=true;
         }
-        $ligne=fgets($connex);
+        else {
+            $ligne=fgets($connex);
+        }
     }
-    $rep.="</table>";
     fclose($connex);
-    echo $courriel;
+
+    if($trouverCourriel){
+        echo "J'ai trouvé le courriel "; 
+        echo $courriel;
+    }
+    else {
+        echo "Le courriel ne se trouve pas dans la base de donnée. Veuillez réessayer."
+    }
+    
 ?>

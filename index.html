@@ -334,11 +334,14 @@
                 </button>
                 </div>
                 <div class="modal-body">
-                    <form class="formulaires" id="enregForm" name="enregForm" action="serveur/connexionMembre.php" method="POST" onsubmit="return validerConnexion(this);">
+                    <form class="formulaires" id="connexionFrom" name="connexionFrom" action="serveur/connexionMembre.php" method="POST" onsubmit="return validerConnexion(this);">
                         <label for="courrielMembre"><b>Courriel</b></label><br>
+                        <div id="messageCourrielMembre">Entrez une adresse courriel valide dans le format votrenom@domaine.com</div>
                         <input type="text" placeholder="Entrez votre adresse courriel" name="courrielMembre" id="courrielMembre" />
                         
                         <label for="motDePasseMembre"><b>Mot de passe</b></label><br>
+                        <div id="messageMdpMembreVide">Entrez un mot de passe</div>
+                        <div id="messageMdpMembreErrone">Le mot de passe doit contenir entre 8 et 10 caractères. Les caractères acceptés sont les lettres minuscules et majuscules, les chiffres, les tirets et les caractères de soulignement.</div>
                         <input type="password" placeholder="Entrez le mot de passe" name="motDePasseMembre" id="motDePasseMembre">
                         
                         <div class="modal-footer">

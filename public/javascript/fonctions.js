@@ -11,10 +11,10 @@ function enregistrementModal() {
 }
 
 
-// ------- Fonctions de validation des formulaires ------- //
-// valider le formulaire
-function validerFormEnreg(formulaire) {
 
+// ------- Fonctions de validation des formulaires ------- //
+// valider le formulaire d'enregistrement
+function validerFormEnreg(formulaire) {
     let prenom = formulaire.prenom.value; // mettre le prénom entré dans une variable
     let nom = formulaire.nom.value; // mettre le nom entré dans une variable
     let courriel = formulaire.courriel.value; // mettre le courriel entré dans une variable
@@ -27,7 +27,6 @@ function validerFormEnreg(formulaire) {
     var mesPrenom = document.getElementById("messagePrenom"); // aller chercher l'élément messagePrenom
     var mesNom = document.getElementById("messageNom"); // aller chercher l'élément messageNom
     var mesCourriel = document.getElementById("messageCourriel"); // aller chercher l'élément messageCourriel
-    var mesMdpVide = document.getElementById("messageMdpVide"); // aller chercher l'élément messageMdpVide
     var mesMdpErrone = document.getElementById("messageMdpErrone"); // aller chercher l'élément messageMdpErrone
     var mesConfMdpVide = document.getElementById("messageConfMdpVide"); // aller chercher l'élément messageConfMdpVide
     var mesConfMdpErrone = document.getElementById("messageConfMdpErrone"); // aller chercher l'élément messageConfMdpErrone
@@ -37,7 +36,6 @@ function validerFormEnreg(formulaire) {
     mesPrenom.style.display = "none";
     mesNom.style.display = "none";
     mesCourriel.style.display = "none";
-    mesMdpVide.style.display = "none";
     mesMdpErrone.style.display = "none";
     mesConfMdpVide.style.display = "none";
     mesConfMdpErrone.style.display = "none";
@@ -61,6 +59,7 @@ function validerFormEnreg(formulaire) {
     } else { //sinon valider le courriel
         validationCourriel = validerCourriel(courriel);
         if (validationCourriel == false) { 
+            mesCourriel.style.display = "block";
             return false;
         }
     }
@@ -78,40 +77,40 @@ function validerFormEnreg(formulaire) {
     } 
 }
 
+
+
 // valider que le courriel est bien rempli
 function validerCourriel(courriel) {
     let regexCourriel = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@[*[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+]*/;
         
     if (!regexCourriel.test(courriel)) { 
-        mesCourriel.style.display = "block";
         return false; 
     } 
 }
 
+
+
 // valider le mot de passe
 function validerMotsDePasses(motDePasse) {
     let regexMDP =  /^[a-zA-Z0-9_-]{8,10}$/;
-    let mesMdpVide = document.getElementById("messageMdpVide"); // aller chercher l'élément messageMdpVide
-    let mesMdpErrone = document.getElementById("messageMdpErrone"); // aller chercher l'élément messageMdpErrone
-    
-    if (motDePasse == '') { // si le mot de passe est vide
-        mesMdpVide.style.display = "block";
-        return false;
-    } else if (!regexMDP.test(motDePasse)) { 
-        mesMdpErrone.style.display = "block";
+
+    if (!regexMDP.test(motDePasse)) { 
         return false; 
     } 
 }
+
+
 // valider les mots de passe identiques
 function verifierMotsDePasses(psw, repPsw) {
     let motDePasse = psw; // mettre le paramètre dans la variable
     let repeterMDP = repPsw; // mettre le paramètre dans la variable
     let validation = validerMotsDePasses(motDePasse); // aller valider le mot de passe
+    let mesMdpErrone = document.getElementById("messageMdpErrone"); // aller chercher l'élément messageMdpErrone
     let mesConfMdpVide = document.getElementById("messageConfMdpVide"); // aller chercher l'élément messageConfMdpVide
     let mesConfMdpErrone = document.getElementById("messageConfMdpErrone"); // aller chercher l'élément messageConfMdpErrone
         
-    
     if (validation == false) {
+        mesMdpErrone.style.display = "block";
         return false;
     } else if (repeterMDP == '') { // Si la confirmation du mot de passe est vide
         mesConfMdpVide.style.display = "block";
@@ -127,6 +126,7 @@ function verifierMotsDePasses(psw, repPsw) {
 
 
 
+
 /**** Pour la connexion ****/
 function validerConnexion(formulaire) {
     let courriel = formulaire.courrielMembre.value; // mettre le courriel entré dans une variable
@@ -134,18 +134,29 @@ function validerConnexion(formulaire) {
     let validationMDP; // pour la validation du mot de passe
     let validationCourriel; // pour la validation du courriel
 
+    let mesCourriel = document.getElementById("messageCourrielMembre"); // aller chercher l'élément messageCourriel
+    let mesMdpErrone = document.getElementById("messageMdpMembreErrone"); // aller chercher l'élément messageMdpErrone
+
+    // lors de la validation cacher les messages d'erreur
+    mesCourriel.style.display = "none";
+    mesMdpErrone.style.display = "none";
+    
+
     if (courriel == '') { // si le courriel est vide
-        alert ("Entrez une adresse courriel");
+        mesCourriel.style.display = "block";
         return false;
     } else { //sinon valider le courriel
         validationCourriel = validerCourriel(courriel);
         if (validationCourriel == false) { 
+            mesCourriel.style.display = "block";
             return false;
         }
-    }
+    } 
     
+    // validation du mot de passe
     validationMDP = validerMotsDePasses(motDePasse);
     if (validationMDP == false) { 
+        mesMdpErrone.style.display = "block";
         return false;
     } 
 }
