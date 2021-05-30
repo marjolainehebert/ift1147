@@ -31,7 +31,7 @@
                     <div class="col-md-2 col-sm-12">
                         <div class="logo">
                             <img src="../images/streamtopia.png" alt="StreamTopia">
-                            <a href="../../index.html">
+                            <a href="../../index.php">
                                 StreamTopia
                             </a>
                         </div>
@@ -52,8 +52,8 @@
                 <div class="col-sm-12">
                     <?php
                         echo "<h2 class=\"text-center red\">Erreur !</h2>
-                        <h3 class=\"text-center red\">Cette adresse courriel est déjà utilisée. </h3>
-                        <p class=\"text-center  mt-3\">Veuillez vous connecter à partir de la page d'accueil. <br><a href=\"../../index.html\" class=\"btn btn-warning mt-2\">Retour à la page d'accueil</a></p>";
+                        <h3 class=\"text-center\">Cette adresse courriel est déjà utilisée. </h3>
+                        <p class=\"text-center  mt-3\">Veuillez vous connecter à partir de la page d'accueil. <br><a href=\"../../index.php\" class=\"btn btn-warning mt-2\">Retour à la page d'accueil</a></p>";
                     ?>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                         
                         <div class="logo">
                             <img src="../images/streamtopia.png" alt="StreamTopia">
-                            <a href="../../index.html">
+                            <a href="../../index.php">
                                 StreamTopia
                             </a>
                         </div>

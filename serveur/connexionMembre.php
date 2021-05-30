@@ -13,6 +13,7 @@
     $ligne=fgets($connex);
     $trouverCourriel=false;
     
+    // tant que ce n'est pas la fin du fichier et que le courriel n'est pas trouvé, recherche du courriel
     while (!feof($connex) && !$trouverCourriel) {
         $tab=explode(";",$ligne);
         if ($tab[0] === $courriel) {
@@ -25,24 +26,31 @@
     }
 
     fclose($connex);
-    echo "le courriel a été truouvé<br>".$tab[0]." ".$tab[1]." ".$tab[2]." ".$tab[3]."<br>";
-    if($trouverCourriel && $motDePasse === $tab[1]){
-        switch ($leRole) {
-            case 'A': 
-                header("Location: ../public/pages/admin.php");
-                break;
-            case 'E': 
-                header("Location: ../public/pages/employe.php");
-                break;
-            case 'M': 
-                header("Location: ../public/pages/membre.php");
-                break;
-            default: 
-                
+    
+    if($trouverCourriel){ // si on trouve le courriel
+        if ($motDePasse === $tab[1]) { //vérifier que le mot de passe est le même
+            switch ($leRole) {
+                case 'A': // si le role est admin, envoyer vers la page admin
+                    header("Location: ../public/pages/admin.php");
+                    break;
+                case 'E': // si le role est employé, envoyer vers la page employé
+                    header("Location: ../public/pages/employe.php");
+                    break;
+                case 'M': // si le role est membre, envoyer vers la page membre
+                    header("Location: ../public/pages/membre.php");
+                    break;
+                default: // pour tous les autres cas, faire un message d'erreur
+                    echo "ERREUR: Le rôle n'est pas défini";
+            }
+        } else { // sinon envoyer à la page d"erreur de connexion
+            header("Location: ../public/pages/errConnexion.php");
+            exit;
         }
+        
     }
-    else {
-        echo "Le courriel ne se trouve pas dans la base de donnée. Veuillez vous enregistrer.";
+    else { // sinon envoyer vers la page de courriel non trouvé
+        header("Location: ../public/pages/nonTrouve.php");
+        exit;
     }
     
 ?>

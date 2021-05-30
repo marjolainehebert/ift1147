@@ -33,11 +33,11 @@
         }
     }
 
-    if ($trouverCourriel){
+    if ($trouverCourriel){ // si on trouve le courriel
         // redirection vers la page erreur
         header("Location: ../public/pages/dejaEnregistre.php");
         exit;
-    } else {
+    } else { // sinon procéder à l'enregistrement dans le fichier texte
         // écrire dans le fichier d'enregistrement membres
         $ligneEnreg=$prenom.";".$nom.";".$courriel.";".$sexe.";".$naissance.";\n";
         fputs($enreg,$ligneEnreg);

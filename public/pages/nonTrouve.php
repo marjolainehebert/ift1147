@@ -51,9 +51,9 @@
             <div class="row">
                 <div class="col-sm-12">
                     <?php
-                        echo "<h2 class=\"text-center\">Bienvenue!</h2>
-                              <h4 class=\"text-center\">Vous avez bien été enregistré.</h4>
-                              <p class=\"text-center\"><a href=\"../../index.php\" class=\"btn btn-warning mt-5\">Retour à la page d'accueil</a></p>";
+                        echo "<h2 class=\"text-center red\">Erreur !</h2>
+                        <h3 class=\"text-center\">Cette adresse courriel n'a jamais été enregistrée.</h3>
+                        <p class=\"text-center  mt-3\">Veuillez vous enregistrer à partir de la page d'accueil. <br><a href=\"../../index.php\" class=\"btn btn-warning mt-2\">Retour à la page d'accueil</a></p>";
                     ?>
                 </div>
             </div>

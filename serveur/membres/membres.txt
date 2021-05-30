@@ -7,3 +7,6 @@ Quentin Jerome;Tarantino;tarantula@tarantino.bigshot.com;masculin;1963-03-27;
 Kathryn;Bigelow;katy@bigelow.com;feminin;1951-11-27;
 Batman;Tremblay;batman@therealbatman.com;masculin;1952-01-01;
 Steve;Spielb;sspielberg@maytheforcebewithyou.com;masculin;2021-02-28;
+Renaldo;Renoir;rrenoir@renoiretassocies.qc.ca;masculin;1967-09-09;
+Vanilla;Ice;van1lla_1c3@hotmail.com;masculin;1975-06-30;
+Bob;Binette;bob_binette3@caramail.fr;masculin;1960-02-29;

@@ -11,9 +11,6 @@ function enregistrementModal() {
     $('#connexion').modal('hide');
     $('#enregistrer').modal('show');
 }
-function connexionSucces(){
-    messageSucces = "Bienvenue à la page membre"
-}
 
 
 
@@ -48,37 +45,37 @@ function validerFormEnreg(formulaire) {
 
     // Vérifier que le champs Prénom ne soit pas vide
     if (prenom == '') { 
-        mesPrenom.style.display = "block";
-        return false;
+        mesPrenom.style.display = "block"; // montrer le message d'erreur
+        return false; // retourne false
     } 
     
     // Vérifier que le champs Nom ne soit pas vide
     if (nom == '') { 
-        mesNom.style.display = "block";
-        return false;
+        mesNom.style.display = "block"; // montrer le message d'erreur
+        return false; // retourne false
     } 
 
     if (courriel == '') { // si le courriel est vide
-        mesCourriel.style.display = "block";
-        return false;
+        mesCourriel.style.display = "block"; // montrer le message d'erreur
+        return false; // retourne false
     } else { //sinon valider le courriel
-        validationCourriel = validerCourriel(courriel);
-        if (validationCourriel == false) { 
-            mesCourriel.style.display = "block";
-            return false;
+        validationCourriel = validerCourriel(courriel); // appeler la fonction 
+        if (validationCourriel == false) {  // si ça retourne false
+            mesCourriel.style.display = "block"; // montrer le message d'erreur
+            return false; // retourne false
         }
     }
     
     // validation du mot de passe
-    validationMDP = verifierMotsDePasses(motDePasse, repeterMDP);
-    if (validationMDP == false) { 
-        return false;
+    validationMDP = verifierMotsDePasses(motDePasse, repeterMDP); // appeler la fonction 
+    if (validationMDP == false) { // si ça retourne false
+        return false; // retourne false
     } 
     
     // si la date de naissance est vide
     if (naissance == '') {
-        mesNaissance.style.display = "block";
-        return false;
+        mesNaissance.style.display = "block"; // montrer le message d'erreur
+        return false; // retourne false
     } 
 }
 
@@ -88,8 +85,8 @@ function validerFormEnreg(formulaire) {
 function validerCourriel(courriel) {
     let regexCourriel = /(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@[*[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+]*/;
         
-    if (!regexCourriel.test(courriel)) { 
-        return false; 
+    if (!regexCourriel.test(courriel)) { // si le courriel ne se conforme pas à l'expression régulière
+        return false; // retourne false
     } 
 }
 
@@ -98,8 +95,8 @@ function validerCourriel(courriel) {
 // valider le mot de passe
 function validerMotsDePasses(motDePasse) {
     let regexMDP =  /^[a-zA-Z0-9_-]{8,10}$/;
-    if (!regexMDP.test(motDePasse)) { 
-        return false; 
+    if (!regexMDP.test(motDePasse)) {  // si le mot de passe ne se conforme pas à l'expression régulière
+        return false;  // retourne false
     } 
 }
 
@@ -114,16 +111,16 @@ function verifierMotsDePasses(psw, repPsw) {
     let mesConfMdpErrone = document.getElementById("messageConfMdpErrone"); // aller chercher l'élément messageConfMdpErrone
         
     if (validation == false) {
-        mesMdpErrone.style.display = "block";
-        return false;
+        mesMdpErrone.style.display = "block"; // montrer le message d'erreur
+        return false; // retourne false
     } else if (repeterMDP == '') { // Si la confirmation du mot de passe est vide
-        mesConfMdpVide.style.display = "block";
-        return false;
+        mesConfMdpVide.style.display = "block"; // montrer le message d'erreur
+        return false; // retourne false
     } else if (motDePasse != repeterMDP) { // Si les 2 mots de passes sont différents
-        mesConfMdpErrone.style.display = "block";
-        return false;
-    } else {
-        return true;
+        mesConfMdpErrone.style.display = "block"; // montrer le message d'erreur
+        return false; // retourne false
+    } else { //sinon
+        return true; // retourne true
     }
 }
 
@@ -147,13 +144,13 @@ function validerConnexion(formulaire) {
     
 
     if (courriel == '') { // si le courriel est vide
-        mesCourriel.style.display = "block";
-        return false;
+        mesCourriel.style.display = "block"; // montrer le message d'erreur
+        return false; // retourne false
     } else { //sinon valider le courriel
         validationCourriel = validerCourriel(courriel);
         if (validationCourriel == false) { 
-            mesCourriel.style.display = "block";
-            return false;
+            mesCourriel.style.display = "block"; // montrer le message d'erreur
+            return false; // retourne false
         }
     } 
     
@@ -161,9 +158,9 @@ function validerConnexion(formulaire) {
     if (courriel!=='admin@streamtopia.com'){
         validationMDP = validerMotsDePasses(motDePasse);
         if (validationMDP == false) { 
-            mesMdpErrone.style.display = "block";
-            return false;
+            mesMdpErrone.style.display = "block"; // montrer le message d'erreur
+            return false; // retourne false
         } 
-    } else {return true;}
+    } else {return true;} // sinon ça retourne true
     
 }

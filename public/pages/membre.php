@@ -31,7 +31,7 @@
                     <div class="col-md-2 col-sm-12">
                         <div class="logo">
                             <img src="../images/streamtopia.png" alt="StreamTopia">
-                            <a href="../../index.html">
+                            <a href="../../index.php">
                                 StreamTopia
                             </a>
                         </div>
@@ -52,7 +52,7 @@
                 <div class="col-sm-12">
                     <?php
                         echo "<h2 class=\"text-center\">Bienvenue à la page membre</h2>
-                        <p class=\"text-center\"><a href=\"../../index.html\" class=\"btn btn-warning mt-5\">Retour à la page d'accueil</a></p>";
+                        <p class=\"text-center\"><a href=\"../../index.php\" class=\"btn btn-warning mt-5\">Retour à la page d'accueil</a></p>";
                     ?>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                         
                         <div class="logo">
                             <img src="../images/streamtopia.png" alt="StreamTopia">
-                            <a href="../../index.html">
+                            <a href="../../index.php">
                                 StreamTopia
                             </a>
                         </div>
