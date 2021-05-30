@@ -114,3 +114,10 @@ a.dark-link:hover {
 .red {
     color: #FF4E50;
 }
+
+.btn {
+    font-weight:700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    padding:0.8rem 2rem;
+}
