@@ -1,7 +1,7 @@
 /* Entête et navigation */
 
 .header-section{
-    background-color:#252525;
+    background-color:#1c1c1e;
 }
 
 .logo {
@@ -100,4 +100,17 @@ a.dark-link:hover {
     font-weight: bold;
     font-size: 0.8rem;
     display:none;
+}
+
+
+
+/* autres */
+@media (max-width: 768px){
+    .mobile-display-none{
+        display:none;
+    }
+}
+
+.red {
+    color: #FF4E50;
 }

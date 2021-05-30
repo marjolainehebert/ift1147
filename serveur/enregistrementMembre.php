@@ -22,17 +22,37 @@
     $statut='A';
     $role='M';
 
-// écrire dans le fichier d'enregistrement membres
-    $ligneEnreg=$prenom.";".$nom.";".$courriel.";".$sexe.";".$naissance."\n";
-    fputs($enreg,$ligneEnreg);
-    fclose($enreg);
-    
-// Écrire dans le fichier connexion
-    $ligneConnex=$courriel.";".$motDePasse.";".$statut.";".$role."\n";
-    fputs($connex,$ligneConnex);
-    fclose($connex);
+    // Vérifier si le courriel se retrouve déjà dans la base de donnée
+    while (!feof($connex) && !$trouverCourriel) {
+        $tab=explode(";",$ligne);
+        if ($tab[0] === $courriel) {
+            $trouverCourriel=true;
+        }
+        else {
+            $ligne=fgets($connex);
+        }
+    }
 
-// redirection vers la page succès
-    header("Location: ../public/pages/succes.html");
+    if ($trouverCourriel){
+        // redirection vers la page erreur
+        header("Location: ../public/pages/dejaEnregistre.php");
+        exit;
+    } else {
+        // écrire dans le fichier d'enregistrement membres
+        $ligneEnreg=$prenom.";".$nom.";".$courriel.";".$sexe.";".$naissance.";\n";
+        fputs($enreg,$ligneEnreg);
+        fclose($enreg);
+        
+        // Écrire dans le fichier connexion
+        $ligneConnex=$courriel.";".$motDePasse.";".$statut.";".$role.";\n";
+        fputs($connex,$ligneConnex);
+        fclose($connex);
+
+        // redirection vers la page succès
+        header("Location: ../public/pages/enregistrementSucces.php");
+        exit;
+    }
+
+
     
 ?>

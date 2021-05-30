@@ -1,10 +1,9 @@
-Marjolaine;Hébert;admin@streamtopia.com;feminin;1980-09-24
-Maxime;Denis;maxime-denis@streamtopia.com;masculin;1974-09-06
-Simon;Simonneau;simon-simonneau@simmons.ca;masculin;1990-04-01
-Bob;Binette;bbinette@binette.ca;masculin;1939-06-08
-Silvia;Silvester;contact@silviasilvester.com;feminin;1979-11-15
-Renaldo;Renoir;rrenoir@renoiretassocies.qc.ca;masculin;1970-12-24
-Roger;Roger;roger_roger112@caramail.fr;masculin;1909-01-14
-Marjolaine;Hébert;marjolainehebert@hotmail.com;feminin;1980-09-24
-Ginette;Gendron;gigi_1954@caramail.fr;feminin;1954-04-01
-Gontrand;Gauthier;gg@gauthier.qc.ca;masculin;1942-06-24
+Marjolaine;Hébert;admin@streamtopia.com;feminin;1980-09-24;
+Max;Denis;max@streamtopia.com;masculin;1974-09-06;
+Simon;Simonneau;simon.simonneau@simmons.ca;masculin;1995-12-31;
+Steven;Spielberg;sspielberg@maytheforcebewithyou.com;masculin;1946-12-18;
+Xavier;Dolan;xav-doll@dolanproductions.com;masculin;1989-03-20;
+Quentin Jerome;Tarantino;tarantula@tarantino.bigshot.com;masculin;1963-03-27;
+Kathryn;Bigelow;katy@bigelow.com;feminin;1951-11-27;
+Batman;Tremblay;batman@therealbatman.com;masculin;1952-01-01;
+Steve;Spielb;sspielberg@maytheforcebewithyou.com;masculin;2021-02-28;

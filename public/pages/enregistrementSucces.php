@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Fashi Template">
-    <meta name="keywords" content="Fashi, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>StreamTopia</title>
 
-    <!-- Google Font -->
+<!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
@@ -26,10 +17,7 @@
     <script src="../javascript/fonctions.js"></script>
     <!-- Javascript -->
 
-</head>
-
-<body>
-    <!-- Page Preloder -->
+<!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -62,8 +50,11 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2  class="text-center">Vous avez bien été enregistré</h2>
-                    <p  class="text-center">Retour à la <a href="../../index.html" class="dark-link">page d'accueil</a></p>
+                    <?php
+                        echo "<h2 class=\"text-center\">Bienvenue!</h2>
+                              <h4 class=\"text-center\">Vous avez bien été enregistré.</h4>
+                              <p class=\"text-center\"><a href=\"../../index.html\" class=\"btn btn-warning mt-5\">Retour à la page d'accueil</a></p>";
+                    ?>
                 </div>
             </div>
         </div>
@@ -102,10 +93,8 @@
                     <div class="footer-widget">
                         <h5>Information</h5>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Checkout</a></li>
+                            <li><a href="#">À propos</a></li>
                             <li><a href="#">Contact</a></li>
-                            <li><a href="#">Serivius</a></li>
                         </ul>
                     </div>
                 </div>
@@ -149,6 +138,3 @@
     <script src="../utilitaires/js/jquery.slicknav.js"></script>
     <script src="../utilitaires/js/owl.carousel.min.js"></script>
     <script src="../utilitaires/js/main.js"></script>
-</body>
-
-</html>
