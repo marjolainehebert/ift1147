@@ -10,3 +10,5 @@ sspielberg@maytheforcebewithyou.com;12345678;A;M;
 rrenoir@renoiretassocies.qc.ca;Rr3n01r67;A;M;
 van1lla_1c3@hotmail.com;van1lla1c3;A;M;
 bob_binette3@caramail.fr;laBinette3;A;M;
+tata3@hotmail.com;123456789;A;M;
+aaaa@aa.com;12345678;A;M;
