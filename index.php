@@ -91,8 +91,7 @@
     <div class="banner-section spad">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12 pb-4 text-center"><h4>En vedette cette semaine
-                <?php echo realpath('./');?></h4></div>
+                <div class="col-sm-12 pb-4 text-center"><h4>En vedette cette semaine</h4></div>
             </div>
             <div class="row col-md-8 offset-md-2">
                 <div class="row justify-content-between">
